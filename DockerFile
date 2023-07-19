@@ -1,0 +1,8 @@
+# Use an official web server image as a base (example: Nginx)
+FROM nginx:latest
+
+# Copy the HTML files from your local directory to the container's web root
+COPY . /usr/share/nginx/html
+
+# Expose the port your web server is listening on (default for Nginx is 80)
+EXPOSE 80

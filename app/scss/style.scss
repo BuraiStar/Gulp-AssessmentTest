@@ -17,7 +17,7 @@ body {
   background-image: url('/img/efe-yagiz-soysal-DGyVvAJNyPE-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 30% center;
+  background-attachment: fixed;
 }
 
 h1, h2, h3 {
@@ -31,6 +31,18 @@ h1 {
   font-size: calc(2rem + 2vw);
 }
 
+.wrapper {
+  height: 100vh;
+  justify-content: center;
+  overflow-y: auto;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 15vh;
+  }
+}
+
 .box {
   position: relative;
   background-color: green;
@@ -39,8 +51,9 @@ h1 {
   max-width: 700px;
   padding: 2rem;
   border-radius: 12px;
-  top: 15vh;
+  top: 10vh;
   left: 5vw;
   font-size: 1.25rem;
   line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
